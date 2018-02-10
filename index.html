@@ -145,14 +145,17 @@
     if(document.getElementById("e2").checked && document.getElementById("b2").checked && document.getElementById("E2").checked && document.getElementById("a4").checked && document.getElementById("d4").checked && document.getElementById("g3").checked){
       console.log("F");
       play("F");
+      chord.innerHTML = "F";
     }
     else if(document.getElementById("b1").checked && document.getElementById("g2").checked && document.getElementById("d2").checked){
       console.log("Am");
       play("Am");
+      chord.innerHTML = "Am";
     }
     else if(document.getElementById("a2").checked && document.getElementById("d2").checked && document.getElementById("b1").checked){
       console.log("E");
       play("E");
+      chord.innerHTML = "E";
     }
     else if(document.getElementById("a2").checked && document.getElementById("d2").checked){
       console.log("Em");
@@ -162,22 +165,27 @@
     else if(document.getElementById("b2").checked && document.getElementById("d2").checked && document.getElementById("g2").checked){
       console.log("A");
       play("A");
+      chord.innerHTML = "A";
     }
     else if(document.getElementById("a3").checked && document.getElementById("d2").checked && document.getElementById("b1").checked){
       console.log("C");
       play("C");
+      chord.innerHTML = "C";
     }
     else if(document.getElementById("e2").checked && document.getElementById("b3").checked && document.getElementById("g2").checked){
       console.log("D");
       play("D");
+      chord.innerHTML = "D";
     }
     else if(document.getElementById("e1").checked && document.getElementById("g2").checked && document.getElementById("b3").checked){
       console.log("Dm");
       play("Dm");
+      chord.innerHTML = "Dm";
     }
     else if(document.getElementById("e3").checked && document.getElementById("E3").checked && document.getElementById("a2").checked){
       console.log("G");
       play("G");
+      chord.innerHTML = "G";
     }
 
   }
@@ -253,7 +261,7 @@ function uncheck() {
   document.getElementById("d4").checked = false;
   document.getElementById("a4").checked = false;
   document.getElementById("E4").checked = false;
-
+  chord.innerHTML = "";
 }
 
 addMultipleListeners(targetElement, 'mousedown touchstart', swipeStart);
