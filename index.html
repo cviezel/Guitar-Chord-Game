@@ -34,10 +34,10 @@
       <img src="Pictures\fret.png" onclick="showCoords(event)" id = "fret" alt="fret" width="50%" draggable="false" style="margin: 50px 0 0 0">
     </center>
   </div>
+
   <div>
     <center>
-        <br>
-        Chord
+
     </center>
   </div>
   <div>
@@ -46,6 +46,9 @@
     <form>
     <input style = "top: 50px;" type = 'radio'>
   </form>
+
+    <img src="Pictures\strum.png" id = "circle" alt="fret" width="40%" draggable="false" style="margin: 0px 0 0 0">
+
   </center>
   </div>
   <div>
@@ -75,30 +78,39 @@
   function play(string){
     //start audio 0.5-1 second in
     if(string == "A"){
+      document.getElementById('soundA').currentTime = 1;
       document.getElementById('soundA').play();
     }
     if(string == "Am"){
+      document.getElementById('soundAm').currentTime = 1;
       document.getElementById('soundAm').play();
     }
     if(string == "C"){
+      document.getElementById('soundC').currentTime = 1;
       document.getElementById('soundC').play();
     }
     if(string == "D"){
+      document.getElementById('soundD').currentTime = 1;
       document.getElementById('soundD').play();
     }
     if(string == "Dm"){
+      document.getElementById('soundDm').currentTime = 1;
       document.getElementById('soundDm').play();
     }
     if(string == "E"){
+      document.getElementById('soundE').currentTime = 1;
       document.getElementById('soundE').play();
     }
     if(string == "Em"){
+      document.getElementById('soundEm').currentTime = 1;
       document.getElementById('soundEm').play();
     }
     if(string == "F"){
+      document.getElementById('soundF').currentTime = 1;
       document.getElementById('soundF').play();
     }
     if(string == "G"){
+      document.getElementById('soundG').currentTime = 1;
       document.getElementById('soundG').play();
     }
   }
@@ -111,8 +123,8 @@
 var touchStartCoords =  {'x':-1, 'y':-1}, // X and Y coordinates on mousedown or touchstart events.
     touchEndCoords = {'x':-1, 'y':-1},// X and Y coordinates on mouseup or touchend events.
     direction = 'undefined',// Swipe direction
-    minDistanceXAxis = 30,// Min distance on mousemove or touchmove on the X axis
-    maxDistanceYAxis = 30,// Max distance on mousemove or touchmove on the Y axis
+    minDistanceXAxis = 70,// Min distance on mousemove or touchmove on the X axis
+    maxDistanceYAxis = 70,// Max distance on mousemove or touchmove on the Y axis
     maxAllowedTime = 1000,// Max allowed time between swipeStart and swipeEnd
     startTime = 0,// Time on swipeStart
     elapsedTime = 0,// Elapsed time between swipeStart and swipeEnd
