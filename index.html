@@ -41,29 +41,29 @@
       <input class="chk" style = "top: 34%" type ='checkbox' id='b1'>
       <input class="chk" style = "top: 50%" type ='checkbox' id='g1'>
       <input class="chk" style = "top: 65%" type ='checkbox' id='d1'>
-      <input class ="chk" style = "top: 80%" type ='checkbox' id='a1'>
-      <input class ="chk" style = "top: 95%" type ='checkbox' id='E1'>
+      <input class="chk" style = "top: 80%" type ='checkbox' id='a1'>
+      <input class="chk" style = "top: 95%" type ='checkbox' id='E1'>
 
       <input class="chk" style="top:24%; left:21%" type ='checkbox' id='e2'>
       <input class="chk" style = "top: 34%; left:21%" type ='checkbox' id='b2'>
       <input class="chk" style = "top: 50%; left:21%" type ='checkbox' id='g2'>
       <input class="chk" style = "top: 65%; left:21%" type ='checkbox' id='d2'>
-      <input class ="chk" style = "top: 80%; left:21%" type ='checkbox' id='a2'>
-      <input class ="chk" style = "top: 95%; left:21%" type ='checkbox' id='E2'>
+      <input class="chk" style = "top: 80%; left:21%" type ='checkbox' id='a2'>
+      <input class="chk" style = "top: 95%; left:21%" type ='checkbox' id='E2'>
 
       <input class="chk" style="top:24%; left:35%" type ='checkbox' id='e3'>
       <input class="chk" style = "top: 34%; left:35%" type ='checkbox' id='b3'>
       <input class="chk" style = "top: 50%; left:35%" type ='checkbox' id='g3'>
       <input class="chk" style = "top: 65%; left:35%" type ='checkbox' id='d3'>
-      <input class ="chk" style = "top: 80%; left:35%" type ='checkbox' id='a3'>
-      <input class ="chk" style = "top: 95%; left:35%" type ='checkbox' id='E3'>
+      <input class="chk" style = "top: 80%; left:35%" type ='checkbox' id='a3'>
+      <input class="chk" style = "top: 95%; left:35%" type ='checkbox' id='E3'>
 
       <input class="chk" style="top:24%; left:50%" type ='checkbox' id='e4'>
       <input class="chk" style = "top: 34%; left:50%" type ='checkbox' id='b4'>
       <input class="chk" style = "top: 50%; left:50%" type ='checkbox' id='g4'>
       <input class="chk" style = "top: 65%; left:50%" type ='checkbox' id='d4'>
-      <input class ="chk" style = "top: 80%; left:50%" type ='checkbox' id='a4'>
-      <input class ="chk" style = "top: 95%; left:50%" type ='checkbox' id='E4'>
+      <input class="chk" style = "top: 80%; left:50%" type ='checkbox' id='a4'>
+      <input class="chk" style = "top: 95%; left:50%" type ='checkbox' id='E4'>
       </form>
 
 </div>
@@ -84,6 +84,7 @@
     <button type = 'button' onclick="play('G')">G</button>
     </center>
   </div>
+  <button onclick="uncheck()">Uncheck Checkbox</button>
 </body>
 
 <script>
@@ -220,6 +221,34 @@ function addMultipleListeners(el, s, fn) {
   for (var i=0, iLen=evts.length; i<iLen; i++) {
     el.addEventListener(evts[i], fn, false);
   }
+}
+
+function uncheck() {
+  document.getElementById("e1").checked = false;
+  document.getElementById("b1").checked = false;
+  document.getElementById("g1").checked = false;
+  document.getElementById("d1").checked = false;
+  document.getElementById("a1").checked = false;
+  document.getElementById("E1").checked = false;
+  document.getElementById("e2").checked = false;
+  document.getElementById("b2").checked = false;
+  document.getElementById("g2").checked = false;
+  document.getElementById("d2").checked = false;
+  document.getElementById("a2").checked = false;
+  document.getElementById("E2").checked = false;
+  document.getElementById("e3").checked = false;
+  document.getElementById("b3").checked = false;
+  document.getElementById("g3").checked = false;
+  document.getElementById("d3").checked = false;
+  document.getElementById("a3").checked = false;
+  document.getElementById("E3").checked = false;
+  document.getElementById("e4").checked = false;
+  document.getElementById("b4").checked = false;
+  document.getElementById("g4").checked = false;
+  document.getElementById("d4").checked = false;
+  document.getElementById("a4").checked = false;
+  document.getElementById("E4").checked = false;
+
 }
 
 addMultipleListeners(targetElement, 'mousedown touchstart', swipeStart);
