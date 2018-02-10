@@ -84,6 +84,7 @@
   <h1 id="chord">  </h1>
 </center>
   <center>
+    <h4>Click and swipe down to strum!</h4>
     <img src="Pictures\strum.png" id = "circle" alt="fret" width="40%" draggable="false" style="margin: 0px 0 0 0">
   </center>
 
@@ -115,40 +116,51 @@
   function play(string){
     //start audio 0.5-1 second in
     if(string == "A"){
-      document.getElementById('soundA').currentTime = 1.2;
-      document.getElementById('soundA').play();
+      d2.checked = true;
+      g2.checked = true;
+      b2.checked = true;
     }
     if(string == "Am"){
-      document.getElementById('soundAm').currentTime = 1.3;
-      document.getElementById('soundAm').play();
+      b1.checked = true;
+      g2.checked = true;
+      d2.checked = true;
     }
     if(string == "C"){
-      document.getElementById('soundC').currentTime = 1.4;
-      document.getElementById('soundC').play();
+      b1.checked = true;
+      a3.checked = true;
+      d2.checked = true;
     }
     if(string == "D"){
-      document.getElementById('soundD').currentTime = 1.2;
-      document.getElementById('soundD').play();
+      e2.checked = true;
+      b3.checked = true;
+      g2.checked = true;
     }
     if(string == "Dm"){
-      document.getElementById('soundDm').currentTime = 1.1;
-      document.getElementById('soundDm').play();
+      e1.checked = true;
+      g2.checked = true;
+      b3.checked = true;
     }
     if(string == "E"){
-      document.getElementById('soundE').currentTime = 0.8;
-      document.getElementById('soundE').play();
+      a2.checked = true;
+      d2.checked = true;
+      b1.checked = true;
     }
     if(string == "Em"){
-      document.getElementById('soundEm').currentTime = 0.9;
-      document.getElementById('soundEm').play();
+      a2.checked = true;
+      d2.checked = true;
     }
     if(string == "F"){
-      document.getElementById('soundF').currentTime = 1;
-      document.getElementById('soundF').play();
+      e2.checked = true;
+      E2.checked = true;
+      b2.checked = true
+      a4.checked = true;
+      d4.checked = true;
+      g3.checked = true;
     }
     if(string == "G"){
-      document.getElementById('soundG').currentTime = 1;
-      document.getElementById('soundG').play();
+      e3.checked = true;
+      E3.checked = true;
+      a2.checked = true;
     }
   }
   var tableNum;
