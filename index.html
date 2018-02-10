@@ -44,12 +44,26 @@
       <input class ="chk" style = "top: 80%" type ='checkbox' id='a1'>
       <input class ="chk" style = "top: 95%" type ='checkbox' id='E1'>
 
-      <input class="chk" style="top:24%; left:21%" type ='checkbox' id='e1'>
-      <input class="chk" style = "top: 34%; left:21%" type ='checkbox' id='b1'>
-      <input class="chk" style = "top: 50%; left:21%" type ='checkbox' id='g1'>
-      <input class="chk" style = "top: 65%; left:21%" type ='checkbox' id='d1'>
-      <input class ="chk" style = "top: 80%; left:21%" type ='checkbox' id='a1'>
-      <input class ="chk" style = "top: 95%; left:21%" type ='checkbox' id='E1'>
+      <input class="chk" style="top:24%; left:21%" type ='checkbox' id='e2'>
+      <input class="chk" style = "top: 34%; left:21%" type ='checkbox' id='b2'>
+      <input class="chk" style = "top: 50%; left:21%" type ='checkbox' id='g2'>
+      <input class="chk" style = "top: 65%; left:21%" type ='checkbox' id='d2'>
+      <input class ="chk" style = "top: 80%; left:21%" type ='checkbox' id='a2'>
+      <input class ="chk" style = "top: 95%; left:21%" type ='checkbox' id='E2'>
+
+      <input class="chk" style="top:24%; left:35%" type ='checkbox' id='e3'>
+      <input class="chk" style = "top: 34%; left:35%" type ='checkbox' id='b3'>
+      <input class="chk" style = "top: 50%; left:35%" type ='checkbox' id='g3'>
+      <input class="chk" style = "top: 65%; left:35%" type ='checkbox' id='d3'>
+      <input class ="chk" style = "top: 80%; left:35%" type ='checkbox' id='a3'>
+      <input class ="chk" style = "top: 95%; left:35%" type ='checkbox' id='E3'>
+
+      <input class="chk" style="top:24%; left:50%" type ='checkbox' id='e4'>
+      <input class="chk" style = "top: 34%; left:50%" type ='checkbox' id='b4'>
+      <input class="chk" style = "top: 50%; left:50%" type ='checkbox' id='g4'>
+      <input class="chk" style = "top: 65%; left:50%" type ='checkbox' id='d4'>
+      <input class ="chk" style = "top: 80%; left:50%" type ='checkbox' id='a4'>
+      <input class ="chk" style = "top: 95%; left:50%" type ='checkbox' id='E4'>
       </form>
 
 </div>
@@ -123,6 +137,15 @@
 
   function strum()
   {
+    if(document.getElementById("a2").checked && document.getElementById("d2").checked){
+      console.log("strum");
+      play("Em");
+    }
+
+    if(document.getElementById("b1").checked && document.getElementById("g2").checked && document.getElementById("d2").checked){
+      console.log("strum");
+      play("Am");
+    }
 
   }
 
@@ -158,16 +181,9 @@ function swipeEnd(e) {
     directionX = (touchEndCoords.x);
     directionY = (touchEndCoords.y);
 
-    if(directionY > 100 || directionY < -100)
+    if(directionY > 50 || directionY < -50)
     {
-      if(document.getElementById("a1").checked == true && document.getElementById("d1").checked == true){
-        play("Em");
-      }
-      else{
-        console.log("strum");
-        play("G");
-      }
-
+      strum();
     }
   }
 }
