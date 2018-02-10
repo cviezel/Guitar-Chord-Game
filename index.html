@@ -41,56 +41,53 @@
   </div>
   <div>
     <center>
-    <button type = 'button' onclick="playA()">A</button>
-    <button type = 'button' onclick="playAm()">Am</button>
-    <button type = 'button' onclick="playC()">C</button>
-    <button type = 'button' onclick="playD()">D</button>
-    <button type = 'button' onclick="playDm()">Dm</button>
-    <button type = 'button' onclick="playE()">E</button>
-    <button type = 'button' onclick="playEm()">Em</button>
-    <button type = 'button' onclick="playF()">F</button>
-    <button type = 'button' onclick="playG()">G</button>
+    <button type = 'button' onclick="play('A')">A</button>
+    <button type = 'button' onclick="play('Am')">Am</button>
+    <button type = 'button' onclick="play('C')">C</button>
+    <button type = 'button' onclick="play('D')">D</button>
+    <button type = 'button' onclick="play('Dm')">Dm</button>
+    <button type = 'button' onclick="play('E')">E</button>
+    <button type = 'button' onclick="play('Em')">Em</button>
+    <button type = 'button' onclick="play('F')">F</button>
+    <button type = 'button' onclick="play('G')">G</button>
     </center>
   </div>
 </body>
 
 <script>
-  function playA()
-  {
-    document.getElementById('soundA').play();
+
+  function play(string){
+    if(string == "A"){
+      document.getElementById('soundA').play();
+    }
+    if(string == "Am"){
+      document.getElementById('soundAm').play();
+    }
+    if(string == "C"){
+      document.getElementById('soundC').play();
+    }
+    if(string == "D"){
+      document.getElementById('soundD').play();
+    }
+    if(string == "Dm"){
+      document.getElementById('soundDm').play();
+    }
+    if(string == "E"){
+      document.getElementById('soundE').play();
+    }
+    if(string == "Em"){
+      document.getElementById('soundEm').play();
+    }
+    if(string == "F"){
+      document.getElementById('soundF').play();
+    }
+    if(string == "G"){
+      document.getElementById('soundG').play();
+    }
   }
-  function playAm()
-  {
-    document.getElementById('soundAm').play();
-  }
-  function playC()
-  {
-    document.getElementById('soundC').play();
-  }
-  function playD()
-  {
-    document.getElementById('soundD').play();
-  }
-  function playDm()
-  {
-    document.getElementById('soundDm').play();
-  }
-  function playE()
-  {
-    document.getElementById('soundE').play();
-  }
-  function playEm()
-  {
-    document.getElementById('soundEm').play();
-  }
-  function playF()
-  {
-    document.getElementById('soundF').play();
-  }
-  function playG()
-  {
-    document.getElementById('soundG').play();
-  }
+
+
+
 </script>
 
 </html>
