@@ -1,8 +1,6 @@
 <script src="jquery-3.1.1.min.js"></script>
 <html>
 <body>
-  <center><h1>Guitar Chord Game</h1>
-
     <audio
       id="soundA" src="Sounds\A_64kb.mp3" preload="auto">
     </audio>
@@ -30,17 +28,30 @@
     <audio
       id="soundG" src="Sounds\G_64kb.mp3" preload="auto">
     </audio>
-  <img src="Pictures\fret.png" id = "fret" alt="fret" width="50%" style="margin: 50px 0 0 0">
+  <div>
+    <center>
+      <h1>Guitar Chord Game</h1>
+      <img src="Pictures\fret.png" id = "fret" alt="fret" width="50%" draggable="false" style="margin: 50px 0 0 0">
+    </center>
+  </div>
+  <div>
+    <center>
+    <img src="Pictures\circle.png" id = "fret" alt="fret" width="20%" draggable="false" style="margin: 50px 0 0 0">
   </center>
-  <button type = 'button' onclick="playA()">A</button>
-  <button type = 'button' onclick="playAm()">Am</button>
-  <button type = 'button' onclick="playC()">C</button>
-  <button type = 'button' onclick="playD()">D</button>
-  <button type = 'button' onclick="playDm()">Dm</button>
-  <button type = 'button' onclick="playE()">E</button>
-  <button type = 'button' onclick="playEm()">Em</button>
-  <button type = 'button' onclick="playF()">F</button>
-  <button type = 'button' onclick="playG()">G</button>
+  </div>
+  <div>
+    <center>
+    <button type = 'button' onclick="playA()">A</button>
+    <button type = 'button' onclick="playAm()">Am</button>
+    <button type = 'button' onclick="playC()">C</button>
+    <button type = 'button' onclick="playD()">D</button>
+    <button type = 'button' onclick="playDm()">Dm</button>
+    <button type = 'button' onclick="playE()">E</button>
+    <button type = 'button' onclick="playEm()">Em</button>
+    <button type = 'button' onclick="playF()">F</button>
+    <button type = 'button' onclick="playG()">G</button>
+    </center>
+  </div>
 </body>
 
 <script>
