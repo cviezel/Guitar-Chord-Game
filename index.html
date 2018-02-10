@@ -151,7 +151,21 @@
       document.getElementById('soundG').play();
     }
   }
+  var tableNum;
+  function ChordGen(){
+    var rand = [3];
+    var boxes = [3];
+    boxes[0] = document.getElementById("r1");
+    boxes[1] = document.getElementById("r2");
+    boxes[2] = document.getElementById("r3");
+    tableNum = 0;
 
+    for (var i = 0; i < 3; i++)
+    {
+      rand[i] = Math.floor(Math.random() * 9) + 1;
+      boxes[i].innerHTML = convertToChord(rand[i]);
+    }
+  }
   function strum()
   {
     if(document.getElementById("e2").checked && document.getElementById("b2").checked && document.getElementById("E2").checked && document.getElementById("a4").checked && document.getElementById("d4").checked && document.getElementById("g3").checked){
@@ -204,6 +218,7 @@
       document.getElementById('sad').volume = 0.1;
       document.getElementById('sad').play();
     }
+
 
   }
 
@@ -320,20 +335,6 @@ function convertToChord(num)
     return "G";
   }
 
-}
-
-function ChordGen(){
-  var rand = [3];
-  var boxes = [3];
-  boxes[0] = document.getElementById("r1");
-  boxes[1] = document.getElementById("r2");
-  boxes[2] = document.getElementById("r3");
-
-  for (var i = 0; i < 3; i++)
-  {
-    rand[i] = Math.floor(Math.random() * 9) + 1;
-    boxes[i].innerHTML = convertToChord(rand[i]);
-  }
 }
 
 addMultipleListeners(targetElement, 'mousedown touchstart', swipeStart);
