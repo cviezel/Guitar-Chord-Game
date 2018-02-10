@@ -35,7 +35,13 @@
     <center>
     <h1>Guitar Chord Game</h1>
   </center>
-
+  <table>
+  <tr>
+    <th id = "r1"> </th>
+    <th id = "r2"> </th>
+    <th id = "r3"> </th>
+  </tr>
+</table>
   <div class="container">
       <img src="Pictures\fret.png" onclick="showCoords(event)" id = "fret" alt="fret" width="50%" draggable="false" style="margin: 50px 0 0 0;">
 
@@ -72,7 +78,7 @@
 </div>
 <center>
   <button onclick="uncheck()">Uncheck All</button>
-  <button onclick="ChordGen()">Generate Chords</button>
+  <button onclick="ChordGen()">Generates Chords</button>
   <h1 id="chord">  </h1>
 </center>
   <center>
@@ -274,20 +280,6 @@ function uncheck() {
 }
 
 function ChordGen(){
-  var rand = [3];
-  var boxes = [3];
-  boxes[0] = document.getElementById("r1");
-  boxes[1] = document.getElementById("r2");
-  boxes[2] = document.getElementById("r3");
-
-  for (var i = 0; i < 3; i++)
-  {
-    rand[i] = Math.floor(Math.random() * 9) + 1;
-    boxes[i].innerHTML = rand[i];
-
-    //console.log(rand[i]);
-  }
-
 
 
 }
