@@ -67,7 +67,10 @@
       </form>
 
 </div>
-<center> <button onclick="uncheck()">Uncheck Boxes</button> </center>
+<center>
+  <button onclick="uncheck()">Uncheck All</button>
+  <h1 id="chord">  </h1>
+</center>
   <center>
     <img src="Pictures\strum.png" id = "circle" alt="fret" width="40%" draggable="false" style="margin: 0px 0 0 0">
   </center>
@@ -154,6 +157,7 @@
     else if(document.getElementById("a2").checked && document.getElementById("d2").checked){
       console.log("Em");
       play("Em");
+      chord.innerHTML = "Em";
     }
     else if(document.getElementById("b2").checked && document.getElementById("d2").checked && document.getElementById("g2").checked){
       console.log("A");
