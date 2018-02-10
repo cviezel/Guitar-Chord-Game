@@ -154,6 +154,7 @@
 
   function strum()
   {
+
     if(document.getElementById("e2").checked && document.getElementById("b2").checked && document.getElementById("E2").checked && document.getElementById("a4").checked && document.getElementById("d4").checked && document.getElementById("g3").checked){
       console.log("F");
       play("F");
@@ -198,6 +199,9 @@
       console.log("G");
       play("G");
       chord.innerHTML = "G";
+    }
+    if(document.getElementById("r1") == chord.innerHTML){
+      document.getElementById("r1").style.background-color = green;
     }
     else {
       chord.innerHTML = "Not a valid chord!";
