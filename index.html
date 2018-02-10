@@ -31,7 +31,7 @@
   <div>
     <center>
       <h1>Guitar Chord Game</h1>
-      <img src="Pictures\fret.png" id = "fret" alt="fret" width="50%" draggable="false" style="margin: 50px 0 0 0">
+      <img src="Pictures\fret.png" onclick="showCoords(event)" id = "fret" alt="fret" width="50%" draggable="false" style="margin: 50px 0 0 0">
     </center>
   </div>
   <div>
@@ -62,7 +62,15 @@
 
 <script>
 
+  function showCoords(event) {
+    var x = event.clientX;
+    var y = event.clientY;
+    var coords = "X coords: " + x + ", Y coords: " + y;
+    console.log(coords);
+  }
+
   function play(string){
+    //start audio 0.5-1 second in
     if(string == "A"){
       document.getElementById('soundA').play();
     }
