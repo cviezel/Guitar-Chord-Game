@@ -72,7 +72,7 @@
 </div>
 <center>
   <button onclick="uncheck()">Uncheck All</button>
-  <button onclick="ChordGen()">Generates Chords</button>
+  <button onclick="ChordGen()">Generate Chords</button>
   <h1 id="chord">  </h1>
 </center>
   <center>
@@ -274,6 +274,14 @@ function uncheck() {
 }
 
 function ChordGen(){
+  var rand = [3];
+
+  for (var i = 0; i < 3; i++)
+  {
+    rand[i] = Math.floor(Math.random() * 9) + 1;
+    //console.log(rand[i]);
+  }
+
 
 
 }
