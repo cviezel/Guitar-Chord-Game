@@ -1,5 +1,6 @@
 <script src="jquery-3.1.1.min.js"></script>
 <html>
+<link rel="stylesheet" href="main.css">
 <body>
     <audio
       id="soundA" src="Sounds\A_64kb.mp3" preload="auto">
@@ -31,30 +32,22 @@
   <div>
     <center>
       <h1>Guitar Chord Game</h1>
-      <img src="Pictures\fret.png" onclick="showCoords(event)" id = "fret" alt="fret" width="50%" draggable="false" style="margin: 50px 0 0 0">
+      <img src="Pictures\fret.png" onclick="showCoords(event)" id = "fret" alt="fret" width="50%" draggable="false" style="margin: 50px 0 0 0;">
+
+      <form>
+      <input style = "position:relative; height: -50%;" type ='checkbox' id='e1'>
+      <input style = "position:absolute; top: 142px; left:365px" type ='checkbox' id='b1'>
+      <input style = "position:absolute; top: 172px; left:365px" type ='checkbox' id='g1'>
+      <input style = "position:absolute; top: 203px; left:365px" type ='checkbox' id='d1'>
+      <input style = "position:absolute; top: 237px; left:365px" type ='checkbox' id='a1'>
+      <input style = "position:absolute; top: 270px; left:365px" type ='checkbox' id='E1'>
+      </form>
     </center>
-  </div>
-
-  <div>
-    <center>
-
-    </center>
-  </div>
-  <div>
-    <center>
-    <form>
-    <input style = "position:absolute; top: 117px; left:365px" type ='checkbox' id='e1'>
-    <input style = "position:absolute; top: 142px; left:365px" type ='checkbox' id='b1'>
-    <input style = "position:absolute; top: 172px; left:365px" type ='checkbox' id='g1'>
-    <input style = "position:absolute; top: 203px; left:365px" type ='checkbox' id='d1'>
-    <input style = "position:absolute; top: 237px; left:365px" type ='checkbox' id='a1'>
-    <input style = "position:absolute; top: 270px; left:365px" type ='checkbox' id='E1'>
-  </form>
-
+</div>
+  <center>
     <img src="Pictures\strum.png" id = "circle" alt="fret" width="40%" draggable="false" style="margin: 0px 0 0 0">
-
   </center>
-  </div>
+
   <div>
     <center>
     <button type = 'button' onclick="play('A')">A</button>
