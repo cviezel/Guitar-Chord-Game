@@ -152,18 +152,20 @@
     }
   }
   var tableNum;
-  function ChordGen(){
-    var rand = [3];
-    var boxes = [3];
-    boxes[0] = document.getElementById("r1");
-    boxes[1] = document.getElementById("r2");
-    boxes[2] = document.getElementById("r3");
-    tableNum = 0;
+  var boxes = [3];
+  boxes[0] = document.getElementById("r1");
+  boxes[1] = document.getElementById("r2");
+  boxes[2] = document.getElementById("r3");
 
+  function ChordGen()
+  {
+    var rand = [3];
+    tableNum = 0;
     for (var i = 0; i < 3; i++)
     {
       rand[i] = Math.floor(Math.random() * 9) + 1;
       boxes[i].innerHTML = convertToChord(rand[i]);
+      boxes[i].style.backgroundColor = 'white';
     }
   }
   function strum()
@@ -218,6 +220,18 @@
       document.getElementById('sad').volume = 0.1;
       document.getElementById('sad').play();
     }
+
+    console.log(boxes[tableNum].innerHTML);
+    console.log(chord.innerHTML);
+    if (document.getElementById("chord").innerHTML == boxes[tableNum].innerHTML)
+    {
+      boxes[tableNum].style.backgroundColor = 'green';
+    }
+    else
+    {
+      boxes[tableNum].style.backgroundColor = 'red';
+    }
+    tableNum++;
 
 
   }
