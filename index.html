@@ -158,6 +158,9 @@ function swipeEnd(e) {
 
     if(directionY > 10 || directionY < -10)
     {
+      if(document.getElementById("a1").checked == true && document.getElementById("d1").checked == true){
+        play("Em");
+      }
       console.log("strum");
       play("G");
     }
