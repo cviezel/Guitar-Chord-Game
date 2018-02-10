@@ -26,3 +26,16 @@ body{
     border-radius: 5px;
     text-align: center;
 }
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 40%;
+    background-color: white;
+}
+
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
