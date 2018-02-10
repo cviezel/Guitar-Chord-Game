@@ -131,16 +131,12 @@ function swipeEnd(e) {
   touchEndCoords = {'x':e.pageX - touchStartCoords.x, 'y':e.pageY - touchStartCoords.y};
   elapsedTime = new Date().getTime() - startTime;
   if (elapsedTime <= maxAllowedTime){
-    if (Math.abs(touchEndCoords.x) >= minDistanceXAxis && Math.abs(touchEndCoords.y) <= maxDistanceYAxis){
-      direction = (touchEndCoords.x < 0)? 'left' : 'right';
-      switch(direction){
-        case 'left':
-          console.log("left");
-          break;
-        case 'right':
-          console.log("right");
-          break;
-      }
+    directionX = (touchEndCoords.x);
+    directionY = (touchEndCoords.y);
+
+    if(directionY > 10 || directionY < -10)
+    {
+      console.log("strum");
     }
   }
 }
