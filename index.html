@@ -72,6 +72,7 @@
 </div>
 <center>
   <button onclick="uncheck()">Uncheck All</button>
+  <button onclick="ChordGen()">Generates Chords</button>
   <h1 id="chord">  </h1>
 </center>
   <center>
@@ -272,6 +273,10 @@ function uncheck() {
   chord.innerHTML = "";
 }
 
+function ChordGen(){
+
+
+}
 addMultipleListeners(targetElement, 'mousedown touchstart', swipeStart);
 addMultipleListeners(targetElement, 'mousemove touchmove', swipeMove);
 addMultipleListeners(targetElement, 'mouseup touchend', swipeEnd);
