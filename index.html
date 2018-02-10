@@ -34,15 +34,10 @@
       <img src="Pictures\fret.png" onclick="showCoords(event)" id = "fret" alt="fret" width="50%" draggable="false" style="margin: 50px 0 0 0">
     </center>
   </div>
+
   <div>
     <center>
-        <br>
-        Chord
-    </center>
-  </div>
-  <div>
-    <center>
-    <img src="Pictures\circle.png" id = "circle" alt="fret" width="20%" draggable="false" style="margin: 50px 0 0 0">
+    <img src="Pictures\strum.png" id = "circle" alt="fret" width="40%" draggable="false" style="margin: 0px 0 0 0">
   </center>
   </div>
   <div>
@@ -117,8 +112,8 @@
 var touchStartCoords =  {'x':-1, 'y':-1}, // X and Y coordinates on mousedown or touchstart events.
     touchEndCoords = {'x':-1, 'y':-1},// X and Y coordinates on mouseup or touchend events.
     direction = 'undefined',// Swipe direction
-    minDistanceXAxis = 30,// Min distance on mousemove or touchmove on the X axis
-    maxDistanceYAxis = 30,// Max distance on mousemove or touchmove on the Y axis
+    minDistanceXAxis = 70,// Min distance on mousemove or touchmove on the X axis
+    maxDistanceYAxis = 70,// Max distance on mousemove or touchmove on the Y axis
     maxAllowedTime = 1000,// Max allowed time between swipeStart and swipeEnd
     startTime = 0,// Time on swipeStart
     elapsedTime = 0,// Elapsed time between swipeStart and swipeEnd
