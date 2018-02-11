@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="main.css">
 <body>
   <audio
-    id="sad" src="Sounds\sad.mp3" preload="auto">
+    id="sad" src="Sounds\sad1.mp3" preload="auto">
   </audio>
     <audio
       id="soundA" src="Sounds\A_64kb.mp3" preload="auto">
@@ -43,6 +43,7 @@
     <th id = "r3"> </th>
   </tr>
 </table>
+<h2 id = "score">Score: 0 / 0 </h2>
 </center>
   <div class="container">
       <img src="Pictures\fret.png" onclick="showCoords(event)" id = "fret" alt="fret" width="50%" draggable="false" style="margin: 50px 0 0 0;">
@@ -80,12 +81,13 @@
 </div>
 <center>
   <button onclick="uncheck()">Uncheck All</button>
-  <button onclick="ChordGen()">Generate Chords</button>
+  <button onclick="ChordGen()">Generate New Chords</button>
+  <button onclick="reset()">Reset</button>
   <h1 id="chord">  </h1>
 </center>
   <center>
     <h4>Click and swipe down to strum!</h4>
-    <img src="Pictures\strum.png" id = "circle" alt="fret" width="40%" draggable="false" style="margin: 0px 0 0 0">
+    <img src="Pictures\strum2.png" id = "circle" alt="fret" width="40%" draggable="false" style="margin: 0px 0 0 0">
   </center>
 
   <div>
@@ -105,6 +107,16 @@
 </body>
 
 <script>
+
+  var correct = 0;
+  var total = 0;
+  var tableNum;
+  var boxes = [3];
+  boxes[0] = document.getElementById("r1");
+  boxes[1] = document.getElementById("r2");
+  boxes[2] = document.getElementById("r3");
+
+  ChordGen();
 
   function showCoords(event) {
     var x = event.clientX;
@@ -203,11 +215,15 @@
       a2.checked = true;
     }
   }
-  var tableNum;
-  var boxes = [3];
-  boxes[0] = document.getElementById("r1");
-  boxes[1] = document.getElementById("r2");
-  boxes[2] = document.getElementById("r3");
+
+  function reset()
+  {
+    correct = 0;
+    total = 0;
+    score.innerHTML = "Score: " + correct + " / " + total;
+    chord.innerHTML = "";
+    ChordGen();
+  }
 
   function ChordGen()
   {
@@ -269,7 +285,8 @@
     }
     else {
       chord.innerHTML = "Not a valid chord!";
-      document.getElementById('sad').volume = 0.1;
+      document.getElementById('sad').volume = 0.8;
+      document.getElementById('sad').currentTime = 2.4;
       document.getElementById('sad').play();
     }
 
@@ -278,13 +295,20 @@
     if (document.getElementById("chord").innerHTML == boxes[tableNum].innerHTML)
     {
       boxes[tableNum].style.backgroundColor = 'green';
+      correct++;
+      total++;
+      score.innerHTML = "Score: " + correct + " / " + total;
     }
     else
     {
       boxes[tableNum].style.backgroundColor = 'red';
+      total++;
+      score.innerHTML = "Score: " + correct + " / " + total;
     }
     tableNum++;
     uncheck();
+    if (tableNum == 3)
+      setTimeout(ChordGen, 2000);
 
   }
 
@@ -359,7 +383,7 @@ function uncheck() {
   document.getElementById("d4").checked = false;
   document.getElementById("a4").checked = false;
   document.getElementById("E4").checked = false;
-  chord.innerHTML = "";
+
 }
 
 function convertToChord(num)
