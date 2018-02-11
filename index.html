@@ -154,6 +154,7 @@
   }
 
   function play1(string){
+    uncheck();
     if(string == "A"){
       d2.checked = true;
       g2.checked = true;
@@ -283,7 +284,7 @@
       boxes[tableNum].style.backgroundColor = 'red';
     }
     tableNum++;
-
+    uncheck();
 
   }
 
